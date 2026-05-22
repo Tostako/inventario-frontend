@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { Store, User, Bell, Shield, Save, Check, Upload, Info, Trash2, AlertTriangle } from 'lucide-react';
-import { Button, Input, Spinner } from '@/components/ui';
+import { Button, Spinner } from '@/components/ui';
 import { useShop } from '@/hooks/useShop';
 import { useUserProfile } from '@/hooks/useUserProfile';
 import { useDeleteShop } from '@/hooks/useDeleteShop';
@@ -31,7 +31,7 @@ export function SettingsPage() {
   const { profile, fetchProfile, updateProfile, changePassword, isLoading: profileLoading } = useUserProfile();
   const { deleteShop, isLoading: deletingShop, error: deleteError } = useDeleteShop();
   const { updateLogo, isLoading: logoLoading } = useUpdateShopLogo();
-  const { user, logout, selectedShop, setAuth, selectShop } = useAuthStore();
+  const { user, logout, setAuth, selectShop } = useAuthStore();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [logoPreview, setLogoPreview] = useState<string | null>(null);
 

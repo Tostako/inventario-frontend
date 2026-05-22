@@ -58,7 +58,8 @@ export function ProductFormModal({ isOpen, onClose, initialData, imageUrl, onSub
   }, [isOpen, imageUrl]);
 
   const handleFormSubmit = (data: ProductFormData) => {
-    onSubmit({ ...data, image: imageFile || undefined });
+    (data as any).image = imageFile || undefined;
+    onSubmit(data);
   };
 
   const handleClose = () => {

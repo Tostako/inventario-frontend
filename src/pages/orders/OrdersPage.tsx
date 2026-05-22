@@ -4,7 +4,7 @@ import { Search, Filter, ArrowUpDown, ArrowDownUp, Download, Eye, ChevronDown } 
 import { Badge, Button, Spinner } from '@/components/ui';
 import { formatCurrency, formatDate } from '@/lib/utils';
 import { useOrders } from '@/hooks/useOrders';
-import type { Order, OrderStatus } from '@/types/order.types';
+import type { OrderStatus } from '@/types/order.types';
 
 const statusConfig: Record<OrderStatus, { label: string; variant: 'success' | 'warning' | 'info' | 'danger' }> = {
   pending: { label: 'Pendiente', variant: 'warning' },

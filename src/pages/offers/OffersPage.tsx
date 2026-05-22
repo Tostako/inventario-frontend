@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Package, Zap, TrendingDown, Save, Check, Trash2, AlertCircle, Percent, Tag } from 'lucide-react';
+import { Package, Zap, Save, Check, Trash2, AlertCircle, Tag } from 'lucide-react';
 import { Button, Badge, Spinner } from '@/components/ui';
 import { formatCurrency } from '@/lib/utils';
 import { useOffers } from '@/hooks/useOffers';

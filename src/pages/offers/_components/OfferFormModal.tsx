@@ -231,7 +231,7 @@ export function OfferFormModal({ isOpen, onClose, initialData, products, categor
               type="number"
               min={1}
               value={formData.usage_limit || ''}
-              onChange={(e) => handleChange('usage_limit', e.target.value ? Number(e.target.value) : undefined)}
+              onChange={(e) => handleChange('usage_limit', e.target.value ? Number(e.target.value) : 0)}
               placeholder="Sin límite"
               className="w-full px-3 py-2 text-sm rounded-[--radius-md] bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[--color-accent]/20"
             />

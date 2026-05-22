@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { api } from '@/lib/api';
-import { useAuthStore } from '@/stores/authStore';
 
 interface ShopData {
   shop_id: string;

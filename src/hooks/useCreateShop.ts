@@ -35,7 +35,7 @@ export function useCreateShop() {
         throw new Error(response.message || 'Error al crear tienda');
       }
 
-      const { token, shopId, userId } = response.data;
+      const { token, shopId } = response.data;
       localStorage.setItem('token', token);
 
       // Actualizar auth store con la nueva tienda

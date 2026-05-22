@@ -119,7 +119,7 @@ export function CustomerDetailPage() {
                   <ShoppingBag className="h-5 w-5 text-blue-600" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-[--color-text-primary]">{customer.total_orders || 0}</p>
+                  <p className="text-2xl font-bold text-[--color-text-primary]">{(customer.total_orders ?? 0)}</p>
                   <p className="text-xs text-[--color-text-muted]">Pedidos</p>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export function CustomerDetailPage() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-[--color-text-primary]">
-                    {formatCurrency((customer.total_orders || 0) > 0 ? (customer.total_spent || 0) / customer.total_orders : 0)}
+                    {formatCurrency(((customer.total_orders ?? 0) > 0) ? ((customer.total_spent ?? 0) / (customer.total_orders ?? 1)) : 0)}
                   </p>
                   <p className="text-xs text-[--color-text-muted]">Ticket promedio</p>
                 </div>

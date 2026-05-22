@@ -4,7 +4,6 @@ import { Search, Plus, ArrowUpDown, ArrowDownUp, Mail, Phone, MapPin } from 'luc
 import { Badge, Button, Spinner } from '@/components/ui';
 import { formatCurrency, formatDate } from '@/lib/utils';
 import { useCustomers } from '@/hooks/useCustomers';
-import type { Customer } from '@/types/customer.types';
 
 type SortField = 'name' | 'total_orders' | 'total_spent' | 'created_at';
 

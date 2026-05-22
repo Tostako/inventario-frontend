@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react';
-import { DollarSign, ShoppingCart, Package, AlertTriangle, TrendingUp, ArrowRight } from 'lucide-react';
+import { DollarSign, ShoppingCart, Package, AlertTriangle, ArrowRight } from 'lucide-react';
 import { Button, Spinner } from '@/components/ui';
 import { formatCurrency } from '@/lib/utils';
 import { useOrders } from '@/hooks/useOrders';
@@ -27,7 +27,7 @@ export function DashboardPage() {
   const navigate = useNavigate();
   const { orders, isLoading: ordersLoading, fetchOrders } = useOrders();
   const { products, isLoading: productsLoading, fetchProducts } = useProducts();
-  const { customers, isLoading: customersLoading, fetchCustomers } = useCustomers();
+  const { isLoading: customersLoading, fetchCustomers } = useCustomers();
 
   useEffect(() => {
     fetchOrders({ limit: 100 });

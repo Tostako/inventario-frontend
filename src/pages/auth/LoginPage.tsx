@@ -43,7 +43,7 @@ export function LoginPage() {
     try {
       const result = await login(data);
       if (result.needsShopSelection) {
-        setShopOptions(result.shops);
+        setShopOptions(result.shops ?? null);
       } else {
         navigate('/dashboard', { replace: true });
       }

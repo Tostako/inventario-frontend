@@ -13,7 +13,7 @@ export function Header() {
   const profileRef = useRef<HTMLDivElement>(null);
   const shopRef = useRef<HTMLDivElement>(null);
 
-  const { fetchShops, resetFetched, isLoading: loadingShops } = useUserShops();
+  const { fetchShops, isLoading: loadingShops } = useUserShops();
   const { switchShop, isLoading: switchingShop } = useSwitchShop();
 
   const initials = user?.name

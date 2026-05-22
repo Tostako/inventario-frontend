@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #FFFFFF;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-elevated: #F8F8F8;
+  --color-bg-hover: #EEEEEE;
+  --color-bg-subtle: #E5E5E5;
+
+  --color-border-default: transparent;
+  --color-border-subtle: transparent;
+  --color-border-strong: transparent;
+
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A4A4A;
+  --color-text-muted: #888888;
+  --color-text-subtle: #AAAAAA;
+
+  --color-accent: #1d4ed8;
+  --color-accent-hover: #1e3a8a;
+  --color-accent-muted: rgba(29, 78, 216, 0.12);
+  --color-accent-subtle: rgba(29, 78, 216, 0.06);
+
+  --color-blue: #3B82F6;
+  --color-blue-muted: rgba(59, 130, 246, 0.12);
+  --color-purple: #8B5CF6;
+  --color-purple-muted: rgba(139, 92, 246, 0.12);
+  --color-red: #EF4444;
+  --color-red-muted: rgba(239, 68, 68, 0.12);
+  --color-yellow: #F59E0B;
+  --color-yellow-muted: rgba(245, 158, 11, 0.12);
+  --color-pink: #EC4899;
+  --color-pink-muted: rgba(236, 72, 153, 0.12);
+
+  --color-success: #10B981;
+  --color-success-muted: rgba(16, 185, 129, 0.12);
+  --color-warning: #F59E0B;
+  --color-warning-muted: rgba(245, 158, 11, 0.12);
+  --color-error: #EF4444;
+  --color-error-muted: rgba(239, 68, 68, 0.12);
+  --color-info: #3B82F6;
+  --color-info-muted: rgba(59, 130, 246, 0.12);
+
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 28px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 2px 8px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 4px 16px 0 rgba(0, 0, 0, 0.06), 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+  --shadow-modal: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 8px 16px -6px rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-bg-base);
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  input, textarea, select, button {
+    font-family: inherit;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #CCCCCC;
+    border-radius: var(--radius-full);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #AAAAAA;
+  }
+}
